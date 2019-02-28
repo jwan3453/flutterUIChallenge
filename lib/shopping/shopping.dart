@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 class Shopping extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Shopping Page"),
-      ),
-      body: 
+    return new Material(
+      type: MaterialType.transparency,
+      child: 
       Container(
         color: Color.fromRGBO(246, 247, 246, 1.0),
         child: ListView(
@@ -18,7 +16,6 @@ class Shopping extends StatelessWidget {
                 children: <Widget> [
                   new Image.asset(
                     "assets/shopping/coat.png",
-                    //类似于Android的scaleType 此处让图片尽可能小 以覆盖整个widget
                     fit: BoxFit.cover,
                   ),
                   new Positioned(
@@ -190,7 +187,6 @@ class Shopping extends StatelessWidget {
                           ClipOval(
                             child: new Image.asset(
                               "assets/shopping/user1.png",
-                              //类似于Android的scaleType 此处让图片尽可能小 以覆盖整个widget
                               fit: BoxFit.cover,
                               width:35,
                               height: 35,
@@ -237,21 +233,18 @@ class Shopping extends StatelessWidget {
                     children:[
                       new Image.asset(
                         "assets/shopping/item_sepc.jpeg",
-                        //类似于Android的scaleType 此处让图片尽可能小 以覆盖整个widget
                         fit: BoxFit.fill,
                         width: MediaQuery.of(context).size.width * 0.28,
                         height: MediaQuery.of(context).size.width * 0.28,
                       ),
                     new Image.asset(
                         "assets/shopping/item_sepc.jpeg",
-                        //类似于Android的scaleType 此处让图片尽可能小 以覆盖整个widget
                         fit: BoxFit.fill,
                         width: MediaQuery.of(context).size.width * 0.28,
                         height: MediaQuery.of(context).size.width * 0.28,
                       ),
-                new Image.asset(
+                    new Image.asset(
                         "assets/shopping/item_sepc.jpeg",
-                        //类似于Android的scaleType 此处让图片尽可能小 以覆盖整个widget
                         fit: BoxFit.fill,
                         width: MediaQuery.of(context).size.width * 0.28,
                         height: MediaQuery.of(context).size.width * 0.28,
@@ -284,14 +277,11 @@ class _ProductionSelection  extends State<ProductionSelection>  with SingleTicke
     super.initState();
     controller = new AnimationController(
         duration: const Duration(milliseconds: 200 ), vsync: this);
-    //图片宽高从0变到300
     animation = new Tween(begin: 45.0, end: 230.0).chain(new CurveTween(curve: Curves.linear,)
      ).animate(controller)
       ..addListener(() {
         setState(()=>{});
       });
-    //启动动画(正向执行)
-    
   }
 
   @override
@@ -343,7 +333,6 @@ class _ProductionSelection  extends State<ProductionSelection>  with SingleTicke
   }
 
   dispose() {
-    //路由销毁时需要释放动画资源
     controller.dispose();
     super.dispose();
   }

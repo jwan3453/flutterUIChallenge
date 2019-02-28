@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutteruichallenges/shopping.dart';
-import 'package:flutteruichallenges/animate.dart';
-
+import 'package:flutteruichallenges/shopping/shopping.dart';
+import 'package:flutteruichallenges/realestate/realEstate.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,7 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
     'techology', 
     'shopping', 
     'news', 
-    'blog'
+    'blog',
+    'real estate '
     ];
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
                Navigator.push(
                 context,
-                new MaterialPageRoute(builder: (context) => new Shopping()),
+                new MaterialPageRoute(builder: (context) => new RealEstate()),
               );
             },
             selected: true,

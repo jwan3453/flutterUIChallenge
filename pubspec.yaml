@@ -43,6 +43,10 @@ flutter:
    - assets/shopping/user1.png
    - assets/shopping/star.png
    - assets/shopping/item_sepc.jpeg
+
+   - assets/realEstate/house.jpg
+   - assets/realEstate/owner.png
+   - assets/realEstate/phone.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
 
