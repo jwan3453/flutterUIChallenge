@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutteruichallenges/shopping/shopping.dart';
 import 'package:flutteruichallenges/realestate/realEstate.dart';
+import 'package:flutteruichallenges/bookstore/bookStore.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,15 +29,20 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final items = [
-    'enterprise ', 
-    'furnature', 
-    'sport', 
-    'techology', 
-    'shopping', 
-    'news', 
-    'blog',
-    'real estate '
+    {
+      'title':'Book Store',
+      'object': new BookStore(),
+    }, 
+    {
+      'title':'Online Shopping',
+      'object': new Shopping(),
+    }, 
+    {
+      'title': 'Real Estate',
+      'object': new RealEstate(),
+    }
     ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,11 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
         itemCount: items.length,
         itemBuilder: (context, index) {
           return new ListTile(
-            title: new Text('${items[index]}'),
+            title: new Text('${items[index]['title']}'),
             onTap: () {
                Navigator.push(
                 context,
-                new MaterialPageRoute(builder: (context) => new RealEstate()),
+                new MaterialPageRoute(builder: (context) => items[index]['object']),
               );
             },
             selected: true,

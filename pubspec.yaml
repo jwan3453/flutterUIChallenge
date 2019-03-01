@@ -47,6 +47,16 @@ flutter:
    - assets/realEstate/house.jpg
    - assets/realEstate/owner.png
    - assets/realEstate/phone.png
+
+   - assets/bookStore/search.png
+   - assets/bookStore/book_cover.jpeg
+   - assets/bookStore/more.png
+   - assets/bookStore/reading.png
+   - assets/bookStore/list.png
+   - assets/bookStore/space.png
+   - assets/bookStore/book1.jpg
+   - assets/bookStore/book2.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
 
