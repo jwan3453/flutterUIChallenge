@@ -112,7 +112,6 @@ class RealEstate extends StatelessWidget {
                           ClipOval(
                             child: new Image.asset(
                               "assets/realEstate/owner.png",
-                              //类似于Android的scaleType 此处让图片尽可能小 以覆盖整个widget
                               fit: BoxFit.cover,
                               width:35,
                               height: 35,
