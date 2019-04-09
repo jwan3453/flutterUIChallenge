@@ -299,7 +299,7 @@ class _ProductionSelection  extends State<ProductionSelection>  with SingleTicke
               FlatButton(
                 onPressed: () {controller.reverse();},
                 child: Text(
-                'Select Color',
+                'Select Colors',
                 textAlign: TextAlign.center,
                 style: TextStyle( fontSize: 18,color: Color.fromRGBO(29, 41, 62, 1.0)),)
               ),
