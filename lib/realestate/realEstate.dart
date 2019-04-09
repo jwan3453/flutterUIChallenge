@@ -121,7 +121,7 @@ class RealEstate extends StatelessWidget {
                             padding:EdgeInsets.only(right:10)
                           ),
                           Text(
-                            'Stella Wangsss',
+                            'Stella Wangssss',
                             textAlign: TextAlign.center,
                             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color.fromRGBO(27,157,150,1)),
                           ),
